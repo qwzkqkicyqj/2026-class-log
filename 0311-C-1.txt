@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int day;
+    float money; 
+    char grade;        
+    char name[30];// 여행지이름 저장 (문자열)
+    
+    printf("여행지를 입력하세요: "); //화면출력 f(서식)
+     // 숫자->"" 없음 ,"문자"
+    scanf("%s", name); //키보드로 입력 
+                       //문자열은 %s 
+    //&-> 주소 의미
+    //문자열은 & 사용안함 ->문자열명 자체가 주소이므로
+
+    printf("여행일수를 입력하세요: ");
+    scanf("%d", &day); //%d :정수 
+
+    printf("여행경비를 입력하세요: ");
+    scanf("%f", &money);  //%f : 실수
+
+    printf("여행등급을 입력하세요 (A/B/C): ");
+    scanf(" %c", &grade); //%c  문자1글자
+    //%c 앞에 공백주는이유 : 위의 엔터키 상쇄하기위해
+    
+    printf("\n--------여행 정보--------\n");
+    
+    printf("여행지 : %s\n", name);
+    printf("여행 일수 : %d일\n", day);
+    printf("여행 경비 : %.1f원\n", money);
+    printf("여행 등급 : %c\n", grade);
+    return 0;
+}
