@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    char blood;
+    printf("혈액형 입력(A/B/O): ");
+    scanf("%c", &blood);
+    
+    //조건문 switch ~case
+    switch(blood){
+        case('A'):
+            printf("혈액형: A\n");
+            break;
+        case('B'):
+            printf("혈액형: B\n");
+            break;
+        case('O'):
+            printf("혈액형: O\n");
+            break;
+        default:
+            printf("입력이 잘못되었습니다.\n");
+    }
+    
+    return 0;
+}
